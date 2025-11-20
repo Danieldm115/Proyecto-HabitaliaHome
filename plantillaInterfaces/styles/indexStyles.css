@@ -1,0 +1,309 @@
+/* 1. Reset Básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* 2. Estilos del Header Principal */
+header {
+    background-color: #141414;
+    /* Negro estilo Netflix/Cine */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+}
+
+/* Contenedor Flex principal (simula la clase .navbar) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Logo a la izq, contenido a la der */
+    align-items: center;
+    height: 100px;
+    max-width: 90%;
+    margin: 0;
+}
+
+/* Logo */
+.logo img {
+    height: 300px;
+    /* Ajusta esto al tamaño de tu logo */
+    width: auto;
+    display: block;
+}
+
+/* Ocultamos el botón hamburguesa en escritorio (simulación) */
+.navbar-toggler {
+    display: none;
+}
+
+/* Contenedor de los menús (simula .collapse) */
+.collapse.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+    /* Espacio entre logo y menú */
+}
+
+/* 3. Navegación Principal (Links: Home, Movies...) */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+    /* Espacio entre enlaces */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #e5e5e5;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-item.active .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+#navbarSupportedContent {
+    display: flex;
+    width: 100%;
+}
+
+/* Para empujar los iconos a la derecha usamos margin-left auto en un contenedor imaginario,
+   pero como tus divs están sueltos, usaremos flex en el padre */
+.navbar-nav.mr-auto {
+    margin-right: auto;
+    /* Esto empuja los iconos a la derecha */
+}
+
+/* Estilo de cada bloque de icono */
+.search_icon {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search_icon a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+/* Estilos para las imágenes de los iconos */
+.search_icon img {
+    height: 20px;
+    width: auto;
+    /* Truco: Si tus iconos son negros (png), esto los vuelve blancos */
+    filter: invert(1) brightness(100%);
+}
+
+.search_icon:hover a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Clase de utilidad que tienes en tu HTML */
+.padding_left_15 {
+    padding-left: 10px;
+}
+
+/* 5. Responsividad Básica (Móvil) */
+    @media (max-width: 992px) {
+        .navbar {
+            flex-wrap: wrap;
+            height: auto;
+            padding: 15px;
+        }
+
+        .navbar-toggler {
+            display: block;
+            /* Mostraría el botón en móvil */
+            background: #333;
+            border: 1px solid #555;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        /* En una implementación CSS pura sin JS, el menú estaría siempre visible 
+        o requeriría checkbox hack. Aquí simplemente lo apilamos */
+        .collapse.navbar-collapse {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 0;
+            margin-top: 15px;
+            display: none;
+            /* Se ocultaría sin JS de Bootstrap */
+        }
+        .footer_menu ul {
+                flex-direction: column;
+                /* Pone los enlaces uno debajo de otro en móvil */
+                gap: 15px;
+            }
+
+            .layout_padding {
+                padding: 30px 0;
+            }
+
+    }
+   /* ===============================
+   ESTILOS DEL FOOTER
+   =============================== */
+
+    /* 1. Sección Principal del Footer */
+    .footer_section {
+        background-color: #141414;
+        /* Mismo tono oscuro que el header */
+        color: #ffffff;
+        border-top: 1px solid #333;
+        /* Una línea sutil para separarlo del contenido */
+        margin-top: auto;
+        /* Si usas flex en el body, esto empuja el footer al final */
+    }
+
+    /* Clase de utilidad que venía en tu HTML */
+    .layout_padding {
+        padding: 50px 0;
+    }
+
+    /* 2. Contenedor Centrado */
+    .footer_section .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        /* Centra todo el contenido */
+        padding: 0 15px;
+    }
+
+    /* 3. Menú del Footer (Enlaces) */
+    .footer_menu ul {
+        display: flex;
+        justify-content: center;
+        /* Centra los enlaces horizontalmente */
+        flex-wrap: wrap;
+        /* Permite que bajen de línea en móviles */
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        /* Espacio entre el menú y los iconos sociales */
+        gap: 30px;
+        /* Espacio entre cada enlace */
+    }
+
+    .footer_menu ul li a {
+        text-decoration: none;
+        color: #b3b3b3;
+        /* Gris claro, no blanco puro para no cansar la vista */
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .footer_menu ul li a:hover {
+        color: #ffffff;
+        /* Blanco brillante al pasar el mouse */
+        text-decoration: underline;
+    }
+
+    /* 4. Iconos de Redes Sociales */
+    .social_icon ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+    }
+
+    .social_icon ul li a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Efecto al pasar el mouse por los iconos */
+    .social_icon ul li a:hover {
+        transform: translateY(-5px);
+        /* El icono "salta" un poco hacia arriba */
+    }
+
+    /* Estilos para las imágenes (PNGs) */
+    .social_icon img {
+        width: 100%;
+        height: auto;
+        /* IMPORTANTE: Si tus iconos son negros (png originales),
+       esto invierte el color a blanco para que se vean en el fondo oscuro. 
+       Si tus imagenes ya son blancas, borra la línea de 'filter'. */
+        filter: invert(1) brightness(100%);
+        opacity: 0.8;
+        /* Un poco transparentes por defecto */
+        transition: opacity 0.3s;
+    }
+
+    .social_icon li:hover img {
+        opacity: 1;
+        /* Opacidad completa al hacer hover */
+    }
+
+    /* ===============================
+   ESTILOS DEL DROPDOWN (Desplegable)
+   =============================== */
+
+    /* 1. Contenedor del botón y el menú */
+    .dropdown-container {
+        position: relative; /* Necesario para posicionar el menú debajo */
+    }
+
+    /* La flechita pequeña */
+    .arrow {
+        font-size: 10px;
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+
+    /* 2. El menú oculto (la cajita que se despliega) */
+    .dropdown-menu {
+        display: none; /* Oculto por defecto */
+        position: absolute;
+        top: 100%; /* Se coloca justo debajo del botón */
+        left: 0;
+        background-color: #222; /* Un poco más claro que el negro de fondo */
+        min-width: 160px; /* Ancho mínimo para que no quede muy estrecho */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Sombra para dar profundidad */
+        padding: 10px 0;
+        list-style: none;
+        z-index: 1000; /* Asegura que quede encima de todo lo demás */
+        border-radius: 4px;
+    }
+
+    /* 3. Los enlaces dentro del desplegable */
+    .dropdown-menu li a {
+        display: block;
+        padding: 10px 20px;
+        color: #b3b3b3;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    /* Efecto hover en las opciones del desplegable */
+    .dropdown-menu li a:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    /* 4. LA MAGIA: Mostrar el menú al pasar el mouse por el contenedor */
+    .dropdown-container:hover .dropdown-menu {
+        display: block;
+    }
