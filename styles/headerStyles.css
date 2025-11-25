@@ -1,0 +1,85 @@
+/* ===============================
+   ESTILOS DEL HEADER
+   =============================== */
+header {
+  background-color: var(--color-principal);
+  box-shadow: var(--shadow-header);
+  padding: 0 20px;
+}
+
+.main-header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  max-width: 90%;
+  margin: 0;
+}
+
+.main-header__logo img {
+  height: 300px;
+  width: auto;
+  display: block;
+}
+
+.main-header__mobile-toggle {
+  display: none;
+}
+
+/* Contenedor del menú */
+.main-header__menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 10px;
+}
+
+/* Navegación */
+.main-header__primary-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+  margin-right: auto;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.main-header__nav-item.active .main-header__nav-link {
+  color: var(--color-hover-text);
+  font-weight: bold;
+}
+
+/* Íconos de usuario */
+.main-header__user-action {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--color-texto);
+  font-size: 14px;
+}
+
+.main-header__user-action img {
+  height: 20px;
+  width: auto;
+  filter: brightness(0) invert(0); /* asegurar tono oscuro */
+}
+
+.main-header__user-action:hover {
+  color: var(--color-hover-text);
+  text-decoration: underline;
+}
+
+.user-action__text {
+  padding-left: 10px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="../styles/headerStyles.css" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+
+  <header>
+    <nav class="main-header__nav">
+      <a class="main-header__logo" href="index.html"
+        ><img src="assets/icons/HH.png" alt="Home Hub Logo"
+      /></a>
+      <button
+        class="main-header__mobile-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+      >
+        <span>☰</span>
+      </button>
+      <div class="main-header__menu-container" id="mainMenu">
+        <ul class="main-header__primary-nav">
+          <li class="main-header__nav-item">
+            <a class="main-header__nav-link" href="index.html">Home</a>
+          </li>
+          <li class="main-header__nav-item">
+            <a class="main-header__nav-link" href="#">Productos</a>
+          </li>
+          <li>
+            <a class="main-header__nav-link" href="#">Contactános</a>
+          </li>
+          <li class="main-header__nav-item dropdown">
+            <a class="main-header__nav-link" href="#"
+              >Servicios <span class="dropdown__arrow">▼</span></a
+            >
+            <ul class="dropdown__menu">
+              <li><a href="#">Montaje y entrega</a></li>
+              <li><a href="#">Diseño</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#" class="main-header__user-action"
+          ><img src="assets/icons/search.png" alt="Search Icon" /><span
+            class="user-action__text"
+            >Buscar</span
+          ></a
+        >
+        <a href="#" class="main-header__user-action"
+          ><img src="assets/icons/cart.png" alt="Cart Icon" /><span
+            class="user-action__text"
+            >Carrito</span
+          ></a
+        >
+        <a href="#" class="main-header__user-action"
+          ><img src="assets/icons/profile.png" alt="Profile Icon" /><span
+            class="user-action__text"
+            >Perfil</span
+          ></a
+        >
+      </div>
+    </nav>
+  </header>
+</html>
