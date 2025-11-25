@@ -4,57 +4,33 @@
   <link rel="stylesheet" href="../styles/styles.css" />
 
   <header>
-    <nav class="main-header__nav">
-      <a class="main-header__logo" href="index.html"
-        ><img src="assets/icons/HH.png" alt="Home Hub Logo"
-      /></a>
-      <button
-        class="main-header__mobile-toggle"
-        type="button"
-        aria-label="Toggle navigation"
-      >
-        <span>☰</span>
-      </button>
-      <div class="main-header__menu-container" id="mainMenu">
-        <ul class="main-header__primary-nav">
-          <li class="main-header__nav-item">
-            <a class="main-header__nav-link" href="index.html">Home</a>
-          </li>
-          <li class="main-header__nav-item">
-            <a class="main-header__nav-link" href="#">Productos</a>
-          </li>
-          <li>
-            <a class="main-header__nav-link" href="#">Contactános</a>
-          </li>
-          <li class="main-header__nav-item dropdown">
-            <a class="main-header__nav-link" href="#"
-              >Servicios <span class="dropdown__arrow">▼</span></a
-            >
-            <ul class="dropdown__menu">
-              <li><a href="#">Montaje y entrega</a></li>
-              <li><a href="#">Diseño</a></li>
-            </ul>
-          </li>
-        </ul>
-        <a href="#" class="main-header__user-action"
-          ><img src="assets/icons/search.png" alt="Search Icon" /><span
-            class="user-action__text"
-            >Buscar</span
-          ></a
-        >
-        <a href="#" class="main-header__user-action"
-          ><img src="assets/icons/cart.png" alt="Cart Icon" /><span
-            class="user-action__text"
-            >Carrito</span
-          ></a
-        >
-        <a href="#" class="main-header__user-action"
-          ><img src="assets/icons/profile.png" alt="Profile Icon" /><span
-            class="user-action__text"
-            >Perfil</span
-          ></a
-        >
+    <nav class="navL">
+      <a href="../html/index.html">
+        <img src="../assets/icons/HH.png" class="webLogo" />
+      </a>
+      <a href="index.html">Inicio</a>
+      <a href="/html/products.html">Productos</a>
+      <a href="/html/contact.html">Contáctanos</a>
+      <div class="dropdown">
+        <a class="dropbtn">
+          Servicios
+          <i></i>
+        </a>
+        <div class="dropdown-content">
+          <a href="#">Montaje y entrega</a>
+          <a href="#">Diseño</a>
+        </div>
       </div>
+    </nav>
+
+    <nav class="navR">
+      <a href="#">Buscar<img src="../assets/icons/search_icon.png" /></a>
+      <a href="/html/shoppingCart.html"
+        >Carrito<img src="../assets/icons/cart_icon.png"
+      /></a>
+      <a href="/html/profile.html"
+        >Perfil<img src="../assets/icons/user_icon.png"
+      /></a>
     </nav>
   </header>
 </html>
