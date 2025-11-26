@@ -6,7 +6,6 @@
   color: var(--color-texto);
   border-top: 1px solid var(--color-border);
   margin-top: auto;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
