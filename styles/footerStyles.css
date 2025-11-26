@@ -4,8 +4,7 @@ footer {
   display: flex;
   flex-direction: row;
   padding: 20px;
-  margin: 10px;
-  border-radius: 20px;
+  gap: 15px;
 
   .webIcon {
     width: 100px;
@@ -72,6 +71,43 @@ a {
 a:hover {
   color: var(--color-hover-text);
   transition: 0.5s;
+  font-size: 18px;
+}
+
+h1 {
+  color: var(--color-texto);
+  text-align: start;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+  width: fit-content;
+}
+
+.newsletter {
+  padding: 20px;
+  border-radius: 15px;
+  input {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+  }
+
+  button {
+    border-radius: 10px;
+    border: none;
+    padding: 10px 40px 10px 40px;
+    color: var(--color-texto);
+    transition: 0.5s;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: var(--color-acento);
+  }
+
+  button:hover {
+    background-color: var(--color-principal);
+    transition: 0.5s;
+  }
 }
 
 /*Diseño responsive*/

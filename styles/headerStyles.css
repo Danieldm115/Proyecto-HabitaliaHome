@@ -6,8 +6,6 @@ header {
   box-shadow: var(--shadow-header);
   padding: 20px;
   display: flex;
-  margin: 10px;
-  border-radius: 20px;
 }
 
 /*Contenedor de todas las opciones del header (izquierda)*/
