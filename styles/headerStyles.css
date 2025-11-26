@@ -6,6 +6,8 @@ header {
   box-shadow: var(--shadow-header);
   padding: 20px;
   display: flex;
+  margin: 10px;
+  border-radius: 20px;
 }
 
 /*Contenedor de todas las opciones del header (izquierda)*/
@@ -93,4 +95,24 @@ a:hover {
 .dropdown:hover .dropdown-content {
   display: block;
   transition: 0.5s;
+}
+
+/*Diseño responsive*/
+
+/*Vista para móviles*/
+
+@media screen and (max-width: 768px) {
+  .mediaCollapsableText {
+    font-size: 0;
+  }
+}
+
+/* Tablet o pantalla encogida a medias */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mediaCollapsableText {
+    font-size: 0;
+  }
+}
+
+@media (min-width: 1024px) {
 }
