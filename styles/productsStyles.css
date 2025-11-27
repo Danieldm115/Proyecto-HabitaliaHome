@@ -1,0 +1,140 @@
+/* Contenedor principal para centrar el contenido */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+/* 1. Carrusel */
+.carousel {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+  overflow: hidden; 
+}
+
+/* Tamaño y posicion de la imagen grande */
+.slide {
+  height: 350px; 
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+/* Flechas de navegación */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10; 
+  transition: background-color 0.3s;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-arrow.prev {
+  left: 10px;
+}
+
+.carousel-arrow.next {
+  right: 10px;
+}
+
+/* 2. SECCIONES DE PRODUCTO */
+.product-item {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+  align-items: center;
+  gap: 30px; 
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 40px;
+}
+
+/* Estilo para invertir el orden (imagen a la derecha) */
+.product-item-reverse {
+  flex-direction: row-reverse;
+}
+
+.product-image {
+  flex: 1; /* Ocupa 1 unidad de espacio */
+  min-width: 300px;
+  height: 300px; 
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border: 1px solid #ccc; /* Borde simple para delimitar el espacio */
+}
+
+.product-info {
+  flex: 2; /* Ocupa 2 unidades de espacio (más ancho que la imagen) */
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.product-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Botón de "Añadir al carrito" */
+.btn-add-to-cart {
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start; /* Se alinea a la izquierda dentro del flex column */
+  transition: background-color 0.3s;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #e0e0e0;
+}
+
+/* 3. RESPONSIVIDAD (Móviles y Tablets) */
+@media (max-width: 768px) {
+  .product-item,
+  .product-item-reverse {
+    /* En móvil, los elementos se apilan en una sola columna */
+    flex-direction: column;
+  }
+
+  .product-info {
+    /* Centramos el texto y los elementos en la vista móvil */
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn-add-to-cart {
+    align-self: center;
+  }
+}
+
