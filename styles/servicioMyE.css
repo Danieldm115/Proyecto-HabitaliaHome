@@ -96,7 +96,7 @@ p, a, .expert-text, .expert-contact, .logo {
 
 /* Estilos para la sección principal de las tarjetas */
 .card {
-    background-color: var(--color-white);
+    background-color: var(--color-principal);
     border-radius: 12px;
     padding: 30px;
     /* Sombra sutil, utilizando un tono de --color-texto para la coherencia */
@@ -110,7 +110,7 @@ p, a, .expert-text, .expert-contact, .logo {
     font-size: 2.2em;
     font-weight: 700;
     color: var(--color-texto);
-    /* Línea de acento con el color dorado */
+    
     border-bottom: 3px solid var(--color-acento); 
     padding-bottom: 10px;
     margin-bottom: 25px;
@@ -121,7 +121,7 @@ p, a, .expert-text, .expert-contact, .logo {
 .card p {
     font-size: 1.1em;
     line-height: 1.6;
-    color: var(--color-texto-secundario);
+    color: var(--color-texto);
     margin-bottom: 30px;
     text-align: center;
 }
@@ -138,11 +138,11 @@ p, a, .expert-text, .expert-contact, .logo {
 
 /* Estilos para cada elemento de la lista (el servicio individual) */
 .card ul li {
-    background-color: var(--color-fondo-suave); /* Fondo suave para la tarjeta */
+    background-color: var(--color-white); /* Fondo suave para la tarjeta */
     padding: 20px;
     border-radius: 8px;
     /* Línea lateral como acento */
-    border-left: 5px solid var(--color-acento); 
+    border-left: 5px solid var(--color-hover-bg); 
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     line-height: 1.5;
@@ -159,9 +159,10 @@ p, a, .expert-text, .expert-contact, .logo {
     display: flex;
     align-items: center;
     font-size: 1.25em;
-    color: var(--color-acento); /* Título en color de acento */
+    color: var(--color-texto); /* Título en color de acento */
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: 650;
+    
 }
 
 
@@ -177,15 +178,9 @@ p, a, .expert-text, .expert-contact, .logo {
     }
 }
 
-
-/* Expertos Section: Utiliza la clase .card para la coherencia de fondo/sombra */
-.experts-section {
-    padding: 20px 0; /* Un poco menos de padding si ya tiene padding del .card */
-}
-
 /* Título de la sección */
 .experts-section .section-title {
-    font-size: 2.2em; /* Unificado con el h2 de las otras secciones */
+    font-size: 2.2em; 
     font-weight: 700;
     color: var(--color-texto);
     border-bottom: 3px solid var(--color-acento); 
