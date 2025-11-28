@@ -1,7 +1,5 @@
-/* ===============================
-   ESTILOS DEL FOOTER
-   =============================== */
-.main-footer {
+/*Estilo del contenedor del footer, posicionamiento etc*/
+footer {
   background-color: var(--color-principal);
   color: var(--color-texto);
   border-top: 1px solid var(--color-border);
@@ -11,69 +9,92 @@
   width: 100%;
 }
 
-.section-padding {
-  padding: 50px 0;
+/*Icono de redes sociales y su hover*/
+.socialIcon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 25px;
+  transition: transform 0.2s ease;
 }
-
-.main-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 15px;
-}
-
-.main-footer__menu ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
-  gap: 30px;
-}
-
-.footer_menu ul li a {
-  text-decoration: none;
-  color: var(--color-texto);
-  font-size: 16px;
-  font-weight: 500;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-.footer_menu ul li a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.main-footer__social-links ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 20px;
-}
-
-.main-footer__social-links ul li a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s;
-}
-
-.main-footer__social-links ul li a:hover {
+.socialIcon:hover {
   transform: translateY(-5px);
+  transition: 0.5s;
+  transition: transform 0.2s ease;
 }
 
-.main-footer__social-links img {
-  width: 100%;
-  height: auto;
-  opacity: 0.8;
-  filter: brightness(0); /* oscurece iconos */
-  transition: opacity 0.3s;
+/*Estilo de cada una de las opciones del footer y hover y su icono*/
+a {
+  color: var(--color-texto);
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  gap: 5px;
+  transition: 0.5s;
+  align-items: center;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+a:hover {
+  color: var(--color-hover-text);
+  transition: 0.5s;
+  font-size: 18px;
 }
 
-.main-footer__social-links li:hover img {
-  opacity: 1;
+h1 {
+  color: var(--color-texto);
+  text-align: start;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+  width: fit-content;
+}
+
+.newsletter {
+  padding: 20px;
+  border-radius: 15px;
+  input {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+  }
+
+  button {
+    border-radius: 10px;
+    border: none;
+    padding: 10px 40px 10px 40px;
+    color: var(--color-texto);
+    transition: 0.5s;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: var(--color-acento);
+  }
+
+  button:hover {
+    background-color: var(--color-principal);
+    transition: 0.5s;
+  }
+}
+
+/*Diseño responsive*/
+
+/*Vista para móviles*/
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Tablet o pantalla encogida a medias */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media (min-width: 1024px) {
 }
