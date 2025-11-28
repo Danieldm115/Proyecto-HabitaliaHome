@@ -23,25 +23,20 @@ document.addEventListener('DOMContentLoaded', function() {
  * @param {number} n - El índice de la diapositiva a mostrar.
  */
 function showSlide(n) {
-    if (slides.length === 0) return; 
+    if (slides.length === 0) return;
 
-    // Oculta todas las diapositivas
-    slides.forEach(slide => {
-        slide.style.display = 'none';
-    });
-
-    // Calcula el nuevo índice asegurando que el carrusel sea infinito
     if (n >= slides.length) {
-        currentSlideIndex = 0; // Si pasa el final, vuelve al inicio
+        currentSlideIndex = 0;
     } else if (n < 0) {
-        currentSlideIndex = slides.length - 1; // Si va antes del inicio, va al final
+        currentSlideIndex = slides.length - 1;
     } else {
         currentSlideIndex = n;
     }
 
-    // Muestra la diapositiva calculada
-    slides[currentSlideIndex].style.display = 'block';
+    const carouselContent = document.querySelector('.carousel-content');
+    carouselContent.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
 }
+
 
 /**
  * Función pública: Es llamada por los botones del HTML (onclick) para navegar.
