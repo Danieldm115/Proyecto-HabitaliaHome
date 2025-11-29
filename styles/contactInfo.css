@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  padding: 20px;
+  padding: 20px 60px 20px 60px;
 }
 
 .contactInfoContainer {
@@ -17,7 +17,6 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  width: 100%;
 
   div {
     display: flex;
@@ -55,6 +54,7 @@
     font-weight: 500;
     font-size: 20px;
     outline-offset: 0px;
+    margin-top: 10px;
     outline: 0px solid var(--color-texto);
     background-color: var(--color-white);
     transition: 0.2s;
@@ -74,4 +74,22 @@ p {
   color: var(--color-texto);
   font-size: 14px;
   font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  p {
+    white-space: unset;
+  }
+}
+
+/* Tablet o pantalla encogida a medias */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media (min-width: 1024px) {
 }

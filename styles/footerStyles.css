@@ -110,6 +110,11 @@ h1 {
   }
 }
 
+.newsletterInputArea {
+  display: flex;
+  flex-direction: row;
+}
+
 /*Diseño responsive*/
 
 /*Vista para móviles*/
@@ -119,10 +124,17 @@ h1 {
     flex-direction: column;
     align-items: center;
   }
+
+  .newsletterInputArea {
+    flex-direction: column;
+  }
 }
 
 /* Tablet o pantalla encogida a medias */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .newsletterInputArea {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1024px) {
