@@ -115,6 +115,34 @@ h1 {
   flex-direction: row;
 }
 
+/*Estilo del botón del menu de hamburguesa, animado*/
+.mobileHamburgerButton {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.mobileHamburgerButton .bar1,
+.mobileHamburgerButton .bar2,
+.mobileHamburgerButton .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.mobileHamburgerButton.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.mobileHamburgerButton.change .bar2 {
+  opacity: 0;
+}
+
+.mobileHamburgerButton.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
 /*Diseño responsive*/
 
 /*Vista para móviles*/
@@ -123,6 +151,7 @@ h1 {
   footer {
     flex-direction: column;
     align-items: center;
+    white-space: nowrap;
   }
 
   .newsletterInputArea {

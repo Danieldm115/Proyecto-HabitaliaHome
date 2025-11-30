@@ -10,51 +10,61 @@
   </head>
   <body>
     <header>
-  <!-- Menú móvil -->
-  <div class="mobileMenuIcon" onclick="toggleMobileMenu()">☰</div>
-
-  <!-- Menú normal -->
-  <nav class="navL desktopMenu">
-    <a href="../html/index.html">
-      <img src="../assets/icons/HHLogoNoText.svg" class="webLogo" />
-    </a>
-    <a href="index.html">Inicio</a>
-    <a href="./products.html">Productos</a>
-    <a href="./contactInfo.html">Contáctanos</a>
-    <div class="dropdown">
-      <a class="dropbtn">Servicios<i></i></a>
-      <div class="dropdown-content">
-        <a href="./servicioMyE.html">Montaje y entrega</a>
-        <a href="./desingService.html">Diseño</a>
+      <!-- Menú móvil -->
+      <div
+        class="mobileHamburgerButton"
+        onclick="toggleMobileMenu(), toggleMenuButton(this)"
+      >
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
       </div>
-    </div>
-  </nav>
 
-  <nav class="navR desktopMenu">
-    <a href="#">Buscar<img src="../assets/icons/search_icon.png"/></a>
-    <a href="./shoppingCart.html">Carrito<img src="../assets/icons/cart_icon.png"/></a>
-    <a href="./profile.html">Perfil<img src="../assets/icons/user_icon.png"/></a>
-  </nav>
+      <!-- Menú normal -->
+      <nav class="navL desktopMenu">
+        <a href="../html/index.html">
+          <img src="../assets/icons/HHLogoNoText.svg" class="webLogo" />
+        </a>
+        <a href="index.html">Inicio</a>
+        <a href="./products.html">Productos</a>
+        <a href="./contactInfo.html">Contáctanos</a>
+        <div class="dropdown">
+          <a class="dropbtn">Servicios<i></i></a>
+          <div class="dropdown-content">
+            <a href="./servicioMyE.html">Montaje y entrega</a>
+            <a href="./desingService.html">Diseño</a>
+          </div>
+        </div>
+      </nav>
 
-  <!-- Menú móvil desplegable -->
-  <div id="mobileMenu" class="mobileMenu">
-    <a href="../html/index.html">Inicio</a>
-    <a href="./products.html">Productos</a>
-    <a href="./contactInfo.html">Contáctanos</a>
+      <nav class="navR desktopMenu">
+        <a href="#">Buscar<img src="../assets/icons/search_icon.png" /></a>
+        <a href="./shoppingCart.html"
+          >Carrito<img src="../assets/icons/cart_icon.png"
+        /></a>
+        <a href="./profile.html"
+          >Perfil<img src="../assets/icons/user_icon.png"
+        /></a>
+      </nav>
 
-    <div class="mobileDropdown" onclick="toggleMobileSubmenu(this)">
-      <span>Servicios</span>
-      <div class="mobileDropdown-content">
-        <a href="./servicioMyE.html">Montaje y entrega</a>
-        <a href="./desingService.html">Diseño</a>
+      <!-- Menú móvil desplegable -->
+      <div id="mobileMenu" class="mobileMenu">
+        <a href="../html/index.html">Inicio</a>
+        <a href="./products.html">Productos</a>
+        <a href="./contactInfo.html">Contáctanos</a>
+
+        <div class="mobileDropdown" onclick="toggleMobileSubmenu(this)">
+          <span>Servicios</span>
+          <div class="mobileDropdown-content">
+            <a href="./servicioMyE.html">Montaje y entrega</a>
+            <a href="./desingService.html">Diseño</a>
+          </div>
+        </div>
+
+        <a href="#">Buscar</a>
+        <a href="./shoppingCart.html">Carrito</a>
+        <a href="./profile.html">Perfil</a>
       </div>
-    </div>
-
-    <a href="#">Buscar</a>
-    <a href="./shoppingCart.html">Carrito</a>
-    <a href="./profile.html">Perfil</a>
-  </div>
-</header>
-
+    </header>
   </body>
 </html>
