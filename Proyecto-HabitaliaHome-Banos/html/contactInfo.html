@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../styles/contactInfo.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div data-include="./header.html"></div>
+
+    <!--Contenido de la página-->
+    <div class="container">
+      <div class="contactInfoContainer">
+        <h2>Contacta con nosotros</h2>
+        <p>
+          ¿Tienes alguna pregunta, petición o quieres trabajar con nosotros?
+        </p>
+        <p>Rellena el formulario o envianos un e-mail support@hh.com</p>
+        <p>+34 666 33 32 22</p>
+      </div>
+      <div class="contactFormContainer">
+        <div><label>Nombre*</label> <input /></div>
+        <div><label>Apellidos*</label> <input /></div>
+        <div><label>Teléfono*</label> <input /></div>
+        <div><label>Organizacion(Opcional)</label> <input /></div>
+        <div class="messageInputContainer">
+          <label>Mensaje*</label>
+          <input class="messageInput" />
+        </div>
+        <div>
+          <button>Enviar</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div data-include="./footer.html"></div>
+
+    <!-- Script de carga de el header y footer (O cualquier archivo html) -->
+    <!--Usar con un div con el atributo data-include="archivo.html" a cargar-->
+    <script src="../js/include.js"></script>
+  </body>
+</html>

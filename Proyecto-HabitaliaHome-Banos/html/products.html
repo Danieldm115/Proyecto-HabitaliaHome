@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos - Habitalia Home</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/productsStyles.css" />
+  </head>
+  <body>
+    <div data-include="./header.html"></div>
+
+    <main class="container">
+      <section class="carousel">
+        <div class="carousel-content">
+          <div class="slide"> 
+            <img 
+              src="../assets/images/ImgProducts/baño/baño1.png" 
+              alt="Baño de diseño minimalista" 
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="../assets/images/ImgProducts/baño/baño2.png" 
+              alt="Baño de lujo con bañera exenta" 
+            />
+          </div>
+        </div>
+        <button class="carousel-arrow prev" onclick="moveSlide(-1)">&lt;</button>
+        <button class="carousel-arrow next" onclick="moveSlide(1)">&gt;</button>
+      </section>
+
+      <section class="product-item">
+        <div class="product-image">
+          <img src="../assets/images/ImgProducts/baño/BañeraConPatas850$.png" alt="Imagen de BañeraConPatas" />
+        </div>
+        <div class="product-info">
+          <h2>Bañera Black Red</h2>
+          <p>Elegante bañera portátil con acabado negro y detalles en rojo, diseñada con cuerpo flexible y estructura estable con patas metálicas. Compacta, moderna y fácil de montar, ideal para disfrutar de un baño relajante incluso en espacios reducidos.
+          </p>
+          <button class="btn-add-to-cart">
+            <img src="../assets/icons/but_icon.png" alt="Icono de carrito" style="width: 20px; height: 20px;">
+            Añadir al carrito
+          </button>
+        </div>
+      </section>
+
+      <section class="product-item product-item-reverse">
+        <div class="product-image">
+          <img src="../assets/images/ImgProducts/baño/InodoroElEmbajador250$.png" alt="Imagen de Inodoro" />
+        </div>
+        <div class="product-info">
+          <h2>Inodoro moderno compacto</h2>
+          <p>Inodoro de diseño limpio y contemporáneo, con estructura monobloque y acabado blanco brillante. Su forma compacta y curva ofrece comodidad y estilo, ideal para baños modernos que buscan funcionalidad y elegancia.
+          </p>
+          <button class="btn-add-to-cart">
+            <img src="../assets/icons/but_icon.png" alt="Icono de carrito" style="width: 20px; height: 20px;">
+            Añadir al carrito
+          </button>
+        </div>
+      </section>
+
+      <section class="product-item">
+        <div class="product-image">
+          <img src="../assets/images/ImgProducts/baño/ToalleroElCenit65$.png" alt="Imagen de producto 1" />
+        </div>
+        <div class="product-info">
+          <h2>Toallero moderno de pared</h2>
+          <p>Toallero de diseño minimalista con barra metálica rectangular y acabado elegante. Incluye una toalla suave en tono claro, ideal para añadir funcionalidad y estilo a cualquier baño moderno.
+          </p>
+          <button class="btn-add-to-cart">
+            <img src="../assets/icons/but_icon.png" alt="Icono de carrito" style="width: 20px; height: 20px;">
+            Añadir al carrito
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="./footer.html"></div>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/carousel.js"></script> 
+  </body>
+</html>

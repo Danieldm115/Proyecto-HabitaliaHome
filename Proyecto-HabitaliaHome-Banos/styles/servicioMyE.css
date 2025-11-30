@@ -1,0 +1,295 @@
+/* 1. Estilos Globales y Tipografía */
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Tipografía de Títulos (Playfair Display Bold) */
+.main-title, .section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; /* Bold */
+    color: var(--color-texto);
+    text-align: center;
+}
+
+/* Tipografía de Subtítulos (Playfair Display Normal) */
+.section-subtitle, .expert-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400; /* Normal */
+    color: var(--color-texto);
+}
+
+/* Cuerpo de Texto (Lato Normal) */
+p, a, .expert-text, .expert-contact, .logo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+
+/* Contenido Principal */
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 36px;
+    margin: 40px 0 20px;
+}
+
+/* Imagen y Flecha */
+.image-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.image-start {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    max-width: 900px;
+    max-height: 600px;
+    object-fit: cover;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-arrow {
+    font-size: 2em;
+    color: var(--color-texto);
+    margin-top: 10px;
+    border-radius:40px;
+    cursor: pointer;
+    background-color: var(--color-neutro);
+}
+
+.image-arrow:hover {
+    background-color: var(--color-hover-bg);
+    color: var(--color-hover-text);
+    transition: 0.5s;
+}
+
+/* INFO Section */
+.info-section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.text-block p {
+    margin: 10px 0;
+    text-align: justify;
+    padding: 0 5%;
+}
+
+/* Estilos para la sección principal de las tarjetas */
+.card {
+    background-color: var(--color-principal);
+    border-radius: 12px;
+    padding: 30px;
+    /* Sombra sutil, utilizando un tono de --color-texto para la coherencia */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Estilos para el título de la sección */
+.card h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--color-texto);
+    
+    border-bottom: 3px solid var(--color-acento); 
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Estilos para el párrafo introductorio */
+.card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--color-texto);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilos para la lista de servicios */
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Estilos para cada elemento de la lista (el servicio individual) */
+.card ul li {
+    background-color: var(--color-white); /* Fondo suave para la tarjeta */
+    padding: 20px;
+    border-radius: 8px;
+    /* Línea lateral como acento */
+    border-left: 5px solid var(--color-hover-bg); 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    line-height: 1.5;
+    color: var(--color-texto); /* Color del texto dentro del list item */
+}
+
+.card ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el texto de énfasis (título del punto) */
+.card ul li strong {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    color: var(--color-texto); /* Título en color de acento */
+    margin-bottom: 8px;
+    font-weight: 650;
+    
+}
+
+
+/* Media query para móviles */
+@media (max-width: 650px) {
+    .card {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .card ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Título de la sección */
+.experts-section .section-title {
+    font-size: 2.2em; 
+    font-weight: 700;
+    color: var(--color-texto);
+    border-bottom: 3px solid var(--color-acento); 
+    padding-bottom: 10px;
+    margin-bottom: 40px; /* Más espacio para separar del primer experto */
+    text-align: center;
+}
+
+/* Contenedor de cada experto */
+.expert-card {
+    display: flex;
+    align-items: center; /* Alineación vertical centrada */
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid var(--color-fondo-suave); /* Borde suave */
+    border-radius: 8px;
+    background-color: var(--color-white); /* Fondo blanco limpio */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Sombra muy sutil */
+}
+
+/* Invertir la posición de foto y detalles para las tarjetas pares */
+.expert-card:nth-child(even) {
+    flex-direction: row-reverse;
+    /* Quitamos text-align: right para que el cuerpo del texto quede legible */
+}
+
+/* Foto del experto */
+.expert-photo {
+    /* Hacer la foto circular y darle un borde de acento */
+    width: 150px; 
+    height: 150px; 
+    object-fit:contain;
+    border-radius: 10%; /* Circular */
+    border: 4px solid var(--color-acento); /* Borde de acento */
+    box-shadow: 0 0 0 2px var(--color-white); /* Borde interno para separar del fondo */
+    
+    /* Manejo de márgenes */
+    margin: 0 30px;
+    flex-shrink: 0;
+}
+
+/* Ajuste de margen para las fotos de tarjetas pares */
+.expert-card:nth-child(even) .expert-photo {
+    margin-left: 30px;
+    margin-right: 0;
+}
+
+/* Detalles del experto (Nombre, Rol, Texto) */
+.expert-details {
+    flex-grow: 1;
+}
+
+.expert-name {
+    font-size: 1.6em;
+    color: var(--color-acento);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.expert-role {
+    font-size: 1.1em;
+    color: var(--color-texto-secundario);
+    font-style: italic;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--color-fondo-suave); /* Separador sutil */
+    padding-bottom: 5px;
+}
+
+.expert-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--color-texto-secundario);
+    margin-bottom: 10px;
+}
+
+.expert-contact {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--color-texto);
+    margin-top: 15px;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 650px) {
+    .expert-card {
+        flex-direction: column; /* Apilar elementos en vertical */
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Anular inversión en móviles y resetear márgenes */
+    .expert-card:nth-child(even) {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .expert-photo {
+        margin: 0 auto 15px auto; /* Centrar la foto y añadir margen abajo */
+    }
+
+    .expert-card:nth-child(even) .expert-photo {
+        margin: 0 auto 15px auto;
+    }
+    
+    .expert-role {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+

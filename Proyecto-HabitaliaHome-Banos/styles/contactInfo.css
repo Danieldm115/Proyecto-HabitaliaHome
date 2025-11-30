@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  padding: 20px 60px 20px 60px;
+}
+
+.contactInfoContainer {
+  width: fit-content;
+  padding-right: 20px;
+}
+
+.contactFormContainer {
+  background-color: var(--color-principal);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+      margin-left: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 10px;
+    }
+  }
+
+  .messageInput {
+    height: 100%;
+  }
+
+  .messageInputContainer {
+    height: 100%;
+  }
+
+  button {
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+    border: none;
+    color: var(--color-texto);
+    transition: 0.5s;
+    font-weight: 500;
+    font-size: 20px;
+    outline-offset: 0px;
+    margin-top: 10px;
+    outline: 0px solid var(--color-texto);
+    background-color: var(--color-white);
+    transition: 0.2s;
+  }
+
+  button:hover {
+    background-color: var(--color-white);
+    transition: 0.2s;
+    outline: 3px solid var(--color-texto);
+    outline-offset: 2px;
+  }
+}
+
+p {
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--color-texto);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  p {
+    white-space: unset;
+  }
+}
+
+/* Tablet o pantalla encogida a medias */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media (min-width: 1024px) {
+}
